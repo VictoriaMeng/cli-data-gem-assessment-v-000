@@ -1,0 +1,2 @@
+class GameScraper
+end
