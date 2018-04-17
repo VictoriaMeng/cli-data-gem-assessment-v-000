@@ -7,7 +7,7 @@ class Game
     attributes.each { |key, value| self.send("#{key}=", value) }
   end
 
-  def self.create_games(games)
+  def self.mass_create(games)
     games.each { |game| @@all << Game.new(game) }
   end
 
