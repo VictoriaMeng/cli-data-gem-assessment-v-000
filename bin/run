@@ -1,4 +1,5 @@
 require_relative '../lib/top_sellers.rb'
 
 game = GameScraper.new
+game.get_names
 binding.pry
