@@ -20,10 +20,29 @@ class GameCli
     Game.mass_create(GameScraper.new.run)
   end
 
+  def valid_number?(input)
+    ("1".."30").to_a.include?(input)
+  end
+
+  def get_input
+    input = ""
+    until valid_number?(input)
+      show_instructions
+      show_list
+      input = gets.strip
+    end
+    input
+  end
+
+  def show_game(input)
+    game = Game.all[input.to_i - 1]
+    puts "Name: #{game.name}"
+    puts "Price: #{game.price}"
+  end
+
   def run
     game_hashes
     say_hi
-    show_instructions
-    show_list
+    show_game(get_input)
   end
 end
