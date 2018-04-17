@@ -14,6 +14,7 @@ class GameScraper
       fields[:price] = game.css(".discount_final_price").text
       @games << fields
     end
+    @games
   end
 
 end

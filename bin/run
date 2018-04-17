@@ -1,7 +1,3 @@
 require_relative '../lib/top_sellers.rb'
 
-hashes = GameScraper.new
-hashes.run
-hashes.games
-games = Game.mass_create(hashes.games)
-binding.pry
+GameCli.new.run

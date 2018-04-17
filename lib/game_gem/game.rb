@@ -8,7 +8,7 @@ class Game
   end
 
   def self.mass_create(games)
-    games.each { |game| @@all << Game.new(game) }
+    games.each { |game| @@all << Game.new(game) if !game[:name].empty? }
   end
 
   def self.all
