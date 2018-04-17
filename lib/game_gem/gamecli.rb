@@ -48,18 +48,30 @@ class GameCli
     %w(y yes).include?(input.downcase)
   end
 
+  def show_continue_message
+    puts "See another game? (y/n)"
+  end
+
   def continue?
     input = ""
-    until "yes_no?(input)"
+    until yes_no?(input)
+      show_continue_message
       input = gets.strip
     end
     yes?(input)
   end
 
+  def say_bye
+    puts "Thanks for using GameGem!"
+  end
+
   def run
     game_hashes
     say_hi
-    show_game(get_input)
-    continue?
+    loop do
+      show_game(get_input)
+      break if !continue?
+    end
+    say_bye
   end
 end
