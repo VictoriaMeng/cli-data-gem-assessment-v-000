@@ -1,31 +1,19 @@
 class GameScraper
-  attr_reader :html, :games, :names, :prices
+  attr_reader :games
 
   def initialize
     @html = Nokogiri::HTML(open("http://store.steampowered.com/"))
-    @games_html = @html.css("#tab_topsellers_content")
-    @names = []
-    @prices = []
-  end
-
-  def get_names
-    names = @games_html.css(".tab_item_name")
-    names.each { |name| @names << [:name, name.text] }
-  end
-
-  def get_prices
-    prices = @games_html.css(".discount_final_price")
-    prices.each { |price| @prices << [:price, price.text] }
-  end
-
-  def games_hashes
-    games_array = @names.zip(@prices)
-    @games = games_array.map { |game| game.to_h }
+    @games_html = @html.css("#tab_topsellers_content a")
+    @games = []
   end
 
   def run
-    get_prices
-    get_names
-    games_hashes
+    @games_html.each do |game|
+      fields = {}
+      fields[:name] = game.css(".tab_item_name").text
+      fields[:price] = game.css(".discount_final_price").text
+      @games << fields
+    end
   end
+
 end
