@@ -1,1 +1,4 @@
 require_relative '../lib/top_sellers.rb'
+
+game = GameScraper.new
+binding.pry
