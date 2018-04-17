@@ -1,5 +1,1 @@
 require_relative '../lib/top_sellers.rb'
-
-Game.new
-GameCli.new
-GameScraper.new
