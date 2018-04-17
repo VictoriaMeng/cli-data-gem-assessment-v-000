@@ -1,5 +1,6 @@
 class GameCli
   def initialize
+    game_hashes
   end
 
   def say_hi
@@ -66,7 +67,6 @@ class GameCli
   end
 
   def run
-    game_hashes
     say_hi
     loop do
       show_game(get_input)
