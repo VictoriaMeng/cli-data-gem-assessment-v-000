@@ -40,9 +40,26 @@ class GameCli
     puts "Price: #{game.price}"
   end
 
+  def yes_no?(input)
+    %w(y n yes no).include?(input.downcase)
+  end
+
+  def yes?(input)
+    %w(y yes).include?(input.downcase)
+  end
+
+  def continue?
+    input = ""
+    until "yes_no?(input)"
+      input = gets.strip
+    end
+    yes?(input)
+  end
+
   def run
     game_hashes
     say_hi
     show_game(get_input)
+    continue?
   end
 end
