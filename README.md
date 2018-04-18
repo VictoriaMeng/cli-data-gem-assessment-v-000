@@ -1,8 +1,10 @@
 # GameGem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/game_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
+This CLI Gem scrapes a list of the top 30 games from the Steam "Top-Sellers" list (URL at http://store.steampowered.com/) and prints them out to the console.
 
-TODO: Delete this and the text above, and describe your gem
+Once the list if printed, users may view games from the list by entering the game's number. This allows them to view the final discounted price of each game.
+
+Then, they may return to the main menu and view other games from the list or exit the app.
 
 ## Installation
 
@@ -22,7 +24,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Enter (1-30) to view game details at the main menu.
+
+When viewing a game's specific details, enter 'y' to to view another game, or 'n' to quit the app.
 
 ## Development
 
