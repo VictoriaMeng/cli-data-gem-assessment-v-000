@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require_relative '../lib/top_sellers.rb'
 
 GameCli.new.run

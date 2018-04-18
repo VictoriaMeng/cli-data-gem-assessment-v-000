@@ -1,3 +1,5 @@
+require_relative 'game.rb'
+
 class GameCli
   def initialize
     game_hashes
