@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-Run '.bin/run' to run the app.
+Run $ .bin/run  to run the app.
 
 Enter (1-30) to view game details at the main menu.
 
