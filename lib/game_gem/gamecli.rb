@@ -79,8 +79,9 @@ class GameCli
   def run
     say_hi
     loop do
-      quit?(get_input) ? break : show_game(get_input)
-      break if !continue? || quit?(get_input)
+      input = get_input
+      quit?(input) ? break : show_game(input)
+      break if !continue?
     end
     say_bye
   end
