@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/top_sellers.rb'
+require_relative '../lib/game_gem.rb'
 
 GameCli.new.run
