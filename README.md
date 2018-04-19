@@ -24,6 +24,8 @@ Or install it yourself as:
 
 ## Usage
 
+Run '.bin/run' to run the app.
+
 Enter (1-30) to view game details at the main menu.
 
 When viewing a game's specific details, enter 'y' to to view another game, or 'n' to quit the app.
