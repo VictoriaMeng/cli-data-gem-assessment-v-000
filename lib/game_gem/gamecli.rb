@@ -10,7 +10,7 @@ class GameCli
   end
 
   def show_instructions
-    puts "Enter (1-30) to see game details."
+    puts "Enter (1-30) to see game details or 'q' to quit."
   end
 
   def show_list
@@ -27,9 +27,17 @@ class GameCli
     ("1".."30").to_a.include?(input)
   end
 
+  def quit?(input)
+    %w(quit q exit e).include?(input.downcase)
+  end
+
+  def valid_menu_option?(input)
+    valid_number?(input) || quit?(input)
+  end
+
   def get_input
     input = ""
-    until valid_number?(input)
+    until valid_menu_option?(input)
       show_instructions
       show_list
       input = gets.strip
