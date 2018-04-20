@@ -6,4 +6,6 @@ require "open-uri"
 
 Bundler.require
 
-require_all 'lib'
+require_relative './game_gem/game'
+require_relative './game_gem/gamecli'
+require_relative './game_gem/gamescraper'
