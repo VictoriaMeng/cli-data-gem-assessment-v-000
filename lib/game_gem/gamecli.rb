@@ -81,7 +81,7 @@ class GameCli
     loop do
       input = get_input
       quit?(input) ? break : show_game(input)
-      break if !continue?
+      break unless continue?
     end
     say_bye
   end
