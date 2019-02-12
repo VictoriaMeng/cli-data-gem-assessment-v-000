@@ -1,4 +1,4 @@
-# GameGem
+## GameGem
 
 This CLI Gem scrapes a list of the top 30 games from the Steam "Top-Sellers" list (URL at http://store.steampowered.com/) and prints them out to the console.
 
