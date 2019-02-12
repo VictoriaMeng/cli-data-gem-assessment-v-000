@@ -6,6 +6,8 @@ Once the list if printed, users may view games from the list by entering the gam
 
 Then, they may return to the main menu and view other games from the list or exit the app.
 
+Blog post link about this app's development [here](https://victoriameng.github.io/cli_gem_-_top-selling_steam_games).
+
 ## Installation
 
 Add this line to your application's Gemfile:
