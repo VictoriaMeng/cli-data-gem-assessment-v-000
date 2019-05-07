@@ -7,14 +7,14 @@ RSpec.describe Game do
   it 'has a name and price' do
     expect(skyrim.name).to eql("Skyrim")
     expect(skyrim.price).to eql("$39.99")
-    
+
     expect(fnv.name).to eql("Fallout New Vegas")
     expect(fnv.price).to eql("$9.99")
   end
 
   context 'when mass creating games' do 
     before(:context) do 
-
+      Game.mass_create([skyrim, fnv])
     end
   end
 end
