@@ -12,9 +12,8 @@ RSpec.describe Game do
     expect(fnv.price).to eql("$9.99")
   end
 
-  context 'when mass creating games' do 
-    before(:context) do 
-      Game.mass_create([skyrim, fnv])
-    end
+  it 'can save mass created games' do 
+    Game.mass_create([{name: "Skyrim", price: "$39.99"}, {name: "Fallout New Vegas", price: "$9.99"}])
+    expect(Game.all.count).to eql(2)
   end
 end
